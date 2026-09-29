@@ -7,6 +7,20 @@ import React from "react";
 
 const SQUICLE = "0 0 64 64";
 
+/**
+ * An icon rendered from a real PNG asset (public/assets/icons/*). Used where
+ * the photographic macOS artwork beats a hand-drawn vector.
+ */
+export const ImgIcon: React.FC<{ src: string; alt?: string }> = ({ src, alt = "" }) => (
+  <img
+    src={src}
+    alt={alt}
+    draggable={false}
+    className="w-full h-full object-contain"
+    style={{ display: "block" }}
+  />
+);
+
 /** Subtle top-light gloss shared by all squircle icons. */
 const Gloss: React.FC<{ id: string; opacity?: number }> = ({ id, opacity = 0.16 }) => (
   <>
@@ -48,195 +62,35 @@ function Base({
 }
 
 export const FinderIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <defs>
-      <linearGradient id="fi-blue" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#3ea7f5" />
-        <stop offset="1" stopColor="#1b7fd8" />
-      </linearGradient>
-      <linearGradient id="fi-light" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#f4fbff" />
-        <stop offset="1" stopColor="#cfe9fc" />
-      </linearGradient>
-    </defs>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="url(#fi-blue)" />
-    {/* light left half, split down the middle */}
-    <path d="M17 1 h13 v62 H17 A16 16 0 0 1 1 47 V17 A16 16 0 0 1 17 1 Z" fill="url(#fi-light)" />
-    <path d="M30 1 v62" stroke="#8fc3e8" strokeWidth="1" opacity="0.65" />
-    {/* eyes */}
-    <path d="M11.5 24 q4.5 -4 9 0" stroke="#264a66" strokeWidth="2.8" fill="none" strokeLinecap="round" />
-    <path d="M43.5 24 q4.5 -4 9 0" stroke="#264a66" strokeWidth="2.8" fill="none" strokeLinecap="round" />
-    {/* nose bridge + smile */}
-    <path d="M30 22 v18" stroke="#7ab6de" strokeWidth="1.4" opacity="0.8" />
-    <path d="M19 45 q11 9 22 0" stroke="#264a66" strokeWidth="2.8" fill="none" strokeLinecap="round" />
-    <Gloss id="fi-gloss" opacity={0.14} />
-  </svg>
+  <ImgIcon src="./assets/icons/finder.png" alt="Finder" />
 );
 
 export const SafariIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <defs>
-      <linearGradient id="sf-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#f7fbff" />
-        <stop offset="1" stopColor="#dbeafc" />
-      </linearGradient>
-      <linearGradient id="sf-ring" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#31c4ff" />
-        <stop offset="1" stopColor="#0a6fe8" />
-      </linearGradient>
-      <linearGradient id="sf-needle" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#ff5b52" />
-        <stop offset="1" stopColor="#e8382e" />
-      </linearGradient>
-    </defs>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="url(#sf-bg)" />
-    <circle cx="32" cy="32" r="26.5" fill="url(#sf-ring)" />
-    <circle cx="32" cy="32" r="24" fill="#fdfeff" />
-    {Array.from({ length: 48 }).map((_, i) => {
-      const a = (i * 2 * Math.PI) / 48;
-      const major = i % 4 === 0;
-      const r1 = major ? 19.2 : 21.3;
-      return (
-        <line
-          key={i}
-          x1={32 + r1 * Math.cos(a)}
-          y1={32 + r1 * Math.sin(a)}
-          x2={32 + 23.5 * Math.cos(a)}
-          y2={32 + 23.5 * Math.sin(a)}
-          stroke={major ? "#7c93a6" : "#a9bac9"}
-          strokeWidth={major ? 1.1 : 0.8}
-        />
-      );
-    })}
-    {/* needle */}
-    <polygon points="32,12.5 36.8,32 32,32" fill="url(#sf-needle)" />
-    <polygon points="32,51.5 27.2,32 32,32" fill="#c8d2da" />
-    <circle cx="32" cy="32" r="2" fill="#f4f7f9" stroke="#aeb9c3" strokeWidth="0.6" />
-    <Gloss id="sf-gloss" opacity={0.15} />
-  </svg>
+  <ImgIcon src="./assets/icons/safari.png" alt="Safari" />
 );
 
 export const TerminalIcon: React.FC = () => (
-  <Base fill="#1b1b1d" glossId="tm-gloss" glossOpacity={0.1}>
-    {/* screen */}
-    <rect x="7" y="11" width="50" height="42" rx="6" fill="#0c0c0d" stroke="#3f3f43" strokeWidth="1" />
-    {/* title bar */}
-    <path d="M7 17 a6 6 0 0 1 6 -6 h38 a6 6 0 0 1 6 6 v3 H7 z" fill="#2a2a2c" />
-    <circle cx="13" cy="15.5" r="1.6" fill="#ff5f57" />
-    <circle cx="18" cy="15.5" r="1.6" fill="#febc2e" />
-    <circle cx="23" cy="15.5" r="1.6" fill="#28c840" />
-    {/* prompt */}
-    <path d="M13 27 l6.5 5.5 -6.5 5.5" stroke="#4cd964" strokeWidth="2.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-    <line x1="23.5" y1="38" x2="37" y2="38" stroke="#f2f2f7" strokeWidth="2.8" strokeLinecap="round" />
-    <rect x="40" y="35.6" width="2.6" height="4.8" fill="#4cd964" opacity="0.9" />
-  </Base>
+  <ImgIcon src="./assets/icons/terminal.png" alt="Terminal" />
 );
 
 export const CalculatorIcon: React.FC = () => (
-  <Base fill="#2b2b2e" glossId="ca-gloss" glossOpacity={0.1}>
-    {/* display */}
-    <rect x="9" y="9" width="46" height="13" rx="4" fill="#1a1a1c" stroke="#3c3c40" strokeWidth="0.8" />
-    <text x="50" y="19" textAnchor="end" fill="#f5f5f7" fontSize="9.5" fontFamily="ui-monospace, 'SF Mono', monospace">
-      1,024
-    </text>
-    {/* function keys */}
-    {[0, 1, 2, 3].map((r) =>
-      [0, 1, 2].map((c) => (
-        <rect
-          key={`k${r}${c}`}
-          x={10 + c * 10.5}
-          y={26 + r * 8.2}
-          width="9"
-          height="6.8"
-          rx="2.4"
-          fill="#5a5a5f"
-        />
-      ))
-    )}
-    {/* operator column */}
-    {[0, 1, 2, 3].map((r) => (
-      <rect key={`o${r}`} x={42.5} y={26 + r * 8.2} width="11.5" height="6.8" rx="2.4" fill="#ff9f0a" />
-    ))}
-    {/* highlights */}
-    <rect x="10" y="26" width="9" height="6.8" rx="2.4" fill="#7a7a80" />
-  </Base>
+  <ImgIcon src="./assets/icons/calculator.png" alt="Calculator" />
 );
 
 export const MusicIcon: React.FC = () => (
-  <Base fill="#fa233b" glossId="mu-gloss" glossOpacity={0.18}>
-    <defs>
-      <linearGradient id="mu-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#fb5c74" />
-        <stop offset="1" stopColor="#fa233b" />
-      </linearGradient>
-    </defs>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="url(#mu-bg)" />
-    <path
-      d="M42.5 13.5 c-8.2 1.6 -15 3.1 -16 3.4 c-2 .5 -3.3 2.1 -3.3 4.2 v21 c-1 -.5 -2.4 -.8 -3.8 -.8 c-4.5 0 -8.1 2.8 -8.1 6.6 c0 3.9 3.6 6.6 8.1 6.6 c4.5 0 8.1 -2.8 8.1 -6.6 V27.6 c0 -.6 .3 -1.1 .9 -1.3 c1.7 -.5 7.7 -1.8 14.1 -3.1 v12.4 c-1 -.4 -2.4 -.7 -3.8 -.7 c-4.5 0 -8.1 2.8 -8.1 6.6 c0 3.9 3.6 6.6 8.1 6.6 c4.5 0 8.1 -2.8 8.1 -6.6 V17.6 c0 -2.7 -2.1 -4.6 -4.4 -4.1 z"
-      fill="#ffffff"
-    />
-  </Base>
+  <ImgIcon src="./assets/icons/music.png" alt="Music" />
 );
 
 export const MailIcon: React.FC = () => (
-  <Base fill="#1d6ff2" glossId="ml-gloss" glossOpacity={0.16}>
-    <defs>
-      <linearGradient id="ml-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#5aabff" />
-        <stop offset="1" stopColor="#1a6cf5" />
-      </linearGradient>
-      <linearGradient id="ml-flap" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#ffffff" />
-        <stop offset="1" stopColor="#eef4fd" />
-      </linearGradient>
-    </defs>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="url(#ml-bg)" />
-    <rect x="9" y="19" width="46" height="27" rx="5.5" fill="url(#ml-flap)" />
-    <path d="M11 22.5 L32 38 L53 22.5" fill="none" stroke="#9cc3f7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M11 43.5 L24.5 32.5 M53 43.5 L39.5 32.5" fill="none" stroke="#cdddf3" strokeWidth="1.6" strokeLinecap="round" />
-  </Base>
+  <ImgIcon src="./assets/icons/mail.png" alt="Mail" />
 );
 
 export const SettingsIcon: React.FC = () => (
-  <Base fill="#85878b" glossId="st-gloss" glossOpacity={0.14}>
-    <defs>
-      <linearGradient id="st-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#b0b3b8" />
-        <stop offset="1" stopColor="#7d8085" />
-      </linearGradient>
-    </defs>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="url(#st-bg)" />
-    {/* gear with 12 teeth */}
-    <g transform="translate(32 32)">
-      {Array.from({ length: 12 }).map((_, i) => (
-        <rect
-          key={i}
-          x="-3.1"
-          y="-24"
-          width="6.2"
-          height="9"
-          rx="2"
-          fill="#f5f5f7"
-          transform={`rotate(${i * 30})`}
-        />
-      ))}
-      <circle r="16.5" fill="#f5f5f7" />
-      <circle r="10.5" fill="#6f7277" />
-      <circle r="7" fill="url(#st-bg)" />
-      <circle r="7" fill="none" stroke="#5d6065" strokeWidth="0.8" />
-    </g>
-  </Base>
+  <ImgIcon src="./assets/icons/settings.png" alt="Settings" />
 );
 
 export const GitHubIcon: React.FC = () => (
-  <Base fill="#ffffff" glossId="gh-gloss" glossOpacity={0.08}>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="#ffffff" />
-    <path
-      d="M32 12 a20.4 20.4 0 0 0 -6.45 39.77 c1 .19 1.4 -.44 1.4 -.98 v-3.44 c-5.67 1.23 -6.87 -2.73 -6.87 -2.73 c-.93 -2.36 -2.27 -3 -2.27 -3 c-1.85 -1.26 .14 -1.24 .14 -1.24 c2.05 .14 3.12 2.1 3.12 2.1 c1.82 3.12 4.78 2.22 5.94 1.7 c.19 -1.32 .71 -2.22 1.29 -2.73 c-4.53 -.52 -9.29 -2.27 -9.29 -10.09 c0 -2.23 .8 -4.05 2.1 -5.48 c-.21 -.52 -.91 -2.6 .2 -5.42 c0 0 1.71 -.55 5.6 2.09 a19.5 19.5 0 0 1 10.2 0 c3.89 -2.64 5.6 -2.09 5.6 -2.09 c1.11 2.82 .41 4.9 .2 5.42 c1.3 1.43 2.1 3.25 2.1 5.48 c0 7.84 -4.77 9.56 -9.32 10.07 c.73 .63 1.38 1.87 1.38 3.77 v5.59 c0 .54 .39 1.18 1.41 .98 A20.4 20.4 0 0 0 32 12 z"
-      fill="#171515"
-    />
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="none" stroke="rgba(0,0,0,0.12)" strokeWidth="1" />
-  </Base>
+  <ImgIcon src="./assets/icons/github-dark.png" alt="GitHub" />
 );
 
 export const FolderIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -276,18 +130,12 @@ export const CVIcon: React.FC = () => (
   </svg>
 );
 
-export const ProjectsIcon: React.FC = () => <FolderIcon />;
+export const ProjectsIcon: React.FC = () => (
+  <ImgIcon src="./assets/icons/desktop-folder.png" alt="Projects" />
+);
 
 export const NotesIcon: React.FC = () => (
-  <Base fill="#fdfcf5" glossId="no-gloss" glossOpacity={0.1}>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="#fdfcf5" />
-    <path d="M1 15.5 A14.5 14.5 0 0 1 15.5 1 h33 A14.5 14.5 0 0 1 63 15.5 v4 H1 z" fill="#f7d354" />
-    <rect x="1" y="19" width="62" height="1" fill="#e3bf45" />
-    {["M14 30 h36", "M14 38 h36", "M14 46 h24"].map((d, i) => (
-      <path key={i} d={d} stroke="#c8c2a8" strokeWidth="2.4" strokeLinecap="round" fill="none" />
-    ))}
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="none" stroke="rgba(0,0,0,0.12)" strokeWidth="1" />
-  </Base>
+  <ImgIcon src="./assets/icons/notes.png" alt="Notes" />
 );
 
 export const TrashIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -334,17 +182,7 @@ export const GameIcon: React.FC = () => (
 );
 
 export const FaceTimeIcon: React.FC = () => (
-  <Base fill="#34c759" glossId="ft-gloss" glossOpacity={0.16}>
-    <defs>
-      <linearGradient id="ft-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stopColor="#67e08b" />
-        <stop offset="1" stopColor="#2fb84e" />
-      </linearGradient>
-    </defs>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="url(#ft-bg)" />
-    <rect x="11" y="21.5" width="28" height="21" rx="6.5" fill="#ffffff" />
-    <path d="M41.5 28.5 l10 -6.5 v20 l-10 -6.5 z" fill="#ffffff" />
-  </Base>
+  <ImgIcon src="./assets/icons/facetime.png" alt="FaceTime" />
 );
 
 export const PreviewIcon: React.FC = () => <CVIcon />;
@@ -382,35 +220,11 @@ export const ExperienceIcon: React.FC = () => (
 );
 
 export const EducationIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#4da3ff" to="#1f6fd0" glossId="ed-ic">
-      {/* open book — two facing pages with a spine, NOT a graduation cap */}
-      <path d="M32 20 c-4-3.4 -10-4.6 -17-4.2 v28 c7-.4 13 .8 17 4.2 z" fill="#ffffff" opacity="0.96" />
-      <path d="M32 20 c4-3.4 10-4.6 17-4.2 v28 c-7-.4 -13 .8 -17 4.2 z" fill="#ffffff" opacity="0.8" />
-      <path d="M32 20 v28" stroke="#1f6fd0" strokeWidth="1.6" opacity="0.65" />
-      {["M19 24.5 c3.4-.2 6.8.1 10 1", "M19 30 c3.4-.2 6.8.1 10 1", "M19 35.5 c3.4-.2 6.8.1 10 1"].map((d, i) => (
-        <path key={i} d={d} stroke="#8fb8e8" strokeWidth="1.7" strokeLinecap="round" fill="none" />
-      ))}
-      {["M45 24.5 c-3.4-.2 -6.8.1 -10 1", "M45 30 c-3.4-.2 -6.8.1 -10 1", "M45 35.5 c-3.4-.2 -6.8.1 -10 1"].map((d, i) => (
-        <path key={i} d={d} stroke="#5e93c9" strokeWidth="1.7" strokeLinecap="round" fill="none" />
-      ))}
-    </GlyphTile>
-  </svg>
+  <ImgIcon src="./assets/icons/education.png" alt="Education" />
 );
 
 export const SkillsIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#ffb340" to="#e07800" glossId="sk-ic">
-      {/* toolbelt: three sliders at different levels — skill calibration */}
-      {[16, 26, 36].map((y, row) => (
-        <g key={y}>
-          <line x1="15" y1={y + 6} x2="49" y2={y + 6} stroke="#ffffff" strokeWidth="3" strokeLinecap="round" opacity="0.45" />
-          <circle cx={22 + row * 10} cy={y + 6} r="4.6" fill="#ffffff" />
-          <circle cx={22 + row * 10} cy={y + 6} r="2.2" fill="#e07800" />
-        </g>
-      ))}
-    </GlyphTile>
-  </svg>
+  <ImgIcon src="./assets/icons/pencil-folder.png" alt="Skills" />
 );
 
 export const PlaygroundIcon: React.FC = () => (
@@ -442,45 +256,11 @@ export const BeatLabIcon: React.FC = () => (
 );
 
 export const CertificationsIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#34c759" to="#1d8a3e" glossId="ce-ic">
-      {/* rosette seal: scalloped ring + ribbon tails */}
-      <g transform="translate(32 30)">
-        {Array.from({ length: 12 }).map((_, i) => (
-          <circle
-            key={i}
-            cx={9.2 * Math.cos((i * 2 * Math.PI) / 12)}
-            cy={9.2 * Math.sin((i * 2 * Math.PI) / 12)}
-            r="4.4"
-            fill="#ffffff"
-            opacity="0.95"
-          />
-        ))}
-        <circle r="9" fill="#ffffff" />
-        <circle r="5.4" fill="#1d8a3e" />
-        <path d="M-3 0 l2.2 2.4 L3 -2" stroke="#ffffff" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      </g>
-      {/* ribbon tails */}
-      <path d="M25 38 l-4 12 6-3 3 6 4-11" fill="#ffffff" opacity="0.85" />
-      <path d="M39 38 l4 12 -6-3 -3 6 -4-11" fill="#ffffff" opacity="0.85" />
-    </GlyphTile>
-  </svg>
+  <ImgIcon src="./assets/icons/skills.png" alt="Certifications" />
 );
 
 export const LanguagesIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#5e5ce6" to="#3634a3" glossId="lg-ic">
-      {/* two speech bubbles — translation between languages */}
-      <path d="M14 20 h22 a5 5 0 0 1 5 5 v8 a5 5 0 0 1 -5 5 h-12 l-6 6 v-6 h-4 a5 5 0 0 1 -5 -5 v-8 a5 5 0 0 1 5 -5 z" fill="#ffffff" opacity="0.95" />
-      <path d="M30 34 h16 a4.4 4.4 0 0 1 4.4 4.4 v6.2 a4.4 4.4 0 0 1 -4.4 4.4 h-2.6 v5 l-5.4-5 h-8 a4.4 4.4 0 0 1 -4.4-4.4 v-6.2 A4.4 4.4 0 0 1 30 34 z" fill="#ffffff" opacity="0.6" />
-      <text x="20" y="31.5" textAnchor="middle" fill="#3634a3" fontSize="11" fontWeight="700" fontFamily="inherit">
-        A
-      </text>
-      <text x="41" y="46.5" textAnchor="middle" fill="#3634a3" fontSize="9.5" fontWeight="700" fontFamily="inherit" opacity="0.9">
-        ع
-      </text>
-    </GlyphTile>
-  </svg>
+  <ImgIcon src="./assets/icons/translate.png" alt="Languages" />
 );
 
 export const HonorsIcon: React.FC = () => (
