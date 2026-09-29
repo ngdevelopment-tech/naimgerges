@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://naimgerges.github.io/sitemap.xml
+Sitemap: https://ngdevelopment-tech.github.io/naimgerges/sitemap.xml

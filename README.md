@@ -1,6 +1,6 @@
 # Naim Gerges — Portfolio OS
 
-[![Live](https://img.shields.io/badge/Live-naimgerges.github.io-0a66ff)](https://naimgerges.github.io/)
+[![Live](https://img.shields.io/badge/Live-Portfolio%20OS-0a66ff)](https://ngdevelopment-tech.github.io/naimgerges/)
 [![Built with](https://img.shields.io/badge/Built%20with-React%2019%20·%20TypeScript%20·%20Vite-3178c6)](https://vitejs.dev/)
 
 **An interactive macOS desktop you can actually use — and inside it, everything I build.**
@@ -10,7 +10,7 @@ browser: a real boot sequence, a lock screen, draggable windows, a dock — and 
 inside it is a chapter of my career. If you want to know what I do, stop reading and start
 clicking.
 
-👉 **[naimgerges.github.io](https://naimgerges.github.io/)**
+👉 **[Open the live portfolio](https://ngdevelopment-tech.github.io/naimgerges/)**
 
 ---
 
@@ -45,8 +45,8 @@ and coded from scratch. No templates, no UI kits, no iframes-to-somewhere-else.
 ## Run it locally
 
 ```bash
-git clone https://github.com/naimgerges/naimgerges.github.io.git
-cd naimgerges.github.io
+git clone https://github.com/ngdevelopment-tech/naimgerges.git
+cd naimgerges
 npm install
 npm run dev        # → http://localhost:3000
 ```
