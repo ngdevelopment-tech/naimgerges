@@ -477,56 +477,56 @@ export interface Award {
   title: string;
   issuer?: string;
   detail: string;
-  period?: string;
-  /** 1 = first prize (gold medal), undefined = recognition/participation */
+  /** 1 = first prize, marked with a claret rosette edge */
   rank?: 1;
+  /** Optional rich-media treatment (TV features, articles) */
+  media?: string;
+  mediaAlt?: string;
+  link?: { label: string; url: string };
 }
 
 export const AWARDS: Award[] = [
   {
     title: "Typing Test",
     issuer: "India Typing",
-    period: "Jan 2021",
     detail: "Speed 114.14 words per minute · QWERTY keyboard layout · 10-minute test duration.",
   },
   {
     title: "Sciences Fair “Innovation et excellence”",
-    period: "Mar 2019",
     detail: "#1 prize — Alpha project — junior category.",
     rank: 1,
   },
   {
     title: "Sciences Fair “Créativité et Innovation”",
     issuer: "Saint Joseph University – USJ",
-    period: "Mar 2018",
     detail: "#1 prize — AutoRent project — junior category.",
     rank: 1,
   },
   {
     title: "Golden Pine Awards",
     issuer: "Collège des Saints-Coeurs Ain Najm",
-    period: "Jul 2017",
     detail: "Appreciation for winning the science-fair contest — USJ, project: “AutoRent”.",
   },
   {
     title: "Moubarat El Ouloum",
     issuer: "Lebanese University – Al Hadath",
-    period: "Apr 2017",
     detail: "#1 prize — LibaTourism project — junior category.",
     rank: 1,
   },
   {
     title: "Sciences Fair “Innover pour demain”",
     issuer: "Saint Joseph University – USJ",
-    period: "Apr 2017",
     detail: "#1 prize — LibaTourism project — junior category.",
     rank: 1,
   },
   {
-    title: "Vex Robotics",
-    issuer: "Holy Spirit University of Kaslik – USEK",
-    period: "Jan 2017",
-    detail: "VRC In The Zone — robotics competition team.",
+    title: "TV Feature — MTV Lebanon",
+    issuer: "MTV Lebanon · Interview with Rania Ziade Ashkar",
+    detail:
+      "“Happening — LibaTourism”: national television interview about the LibaTourism platform.",
+    media: "./assets/mtv-interview.jpg",
+    mediaAlt: "MTV Lebanon interview about LibaTourism",
+    link: { label: "Watch on MTV", url: "https://www.mtv.com.lb/vod/ar/video/224865" },
   },
 ]
 

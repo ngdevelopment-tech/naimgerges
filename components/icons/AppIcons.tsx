@@ -485,7 +485,7 @@ export const LanguagesIcon: React.FC = () => (
 
 export const HonorsIcon: React.FC = () => (
   <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#c9a227" to="#8f6e14" glossId="ho-ic">
+    <GlyphTile from="#8a2f3f" to="#4d1420" glossId="ho-ic">
       {/* laurel wreath around a star — recognition, not a clip-art trophy */}
       <g transform="translate(32 33)">
         {[-1, 1].map((side) => (
