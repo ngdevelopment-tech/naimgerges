@@ -235,7 +235,7 @@ export const EDUCATION: Education[] = [
     grade: "5/5",
     activities:
       "University of Helsinki Open University, Full Stack Open Community, Peer Code Review Group",
-    logo: "./assets/hf-logo.png",
+    logo: "./assets/helsinki-logo.jpg",
     logoFallback: "UH",
     accent: "from-[#0072b5] to-[#004a75]",
     description:
@@ -409,26 +409,65 @@ export const CERTIFICATIONS: Certification[] = [
     media: "./assets/dff-cert.jpg",
   },
   {
-    id: "fso",
-    title: "Full Stack Open",
+    id: "fso-graphql",
+    title: "Full Stack Open: GraphQL",
     issuer: "University of Helsinki",
     detail:
-      "Verified certification covering React, Node.js, GraphQL, TypeScript, testing and CI/CD. Graded 5/5.",
-    logo: "./assets/hf-logo.png",
+      "Certified module covering advanced GraphQL schemas: server and client integration, Apollo, subscriptions and schema design — part of the Full Stack Open program.",
+    logo: "./assets/helsinki-logo.jpg",
     logoFallback: "UH",
     accent: "from-[#0072b5] to-[#004a75]",
+    credentialUrl: "https://studies.cs.helsinki.fi/stats/api/certificate/fs-graphql/en/232abe95f03ab927f7d78a072cb4cbd4",
+    media: "./assets/fso-graphql-cert.jpg",
   },
   {
-    id: "hf-ml",
-    title: "Machine Learning — Deep RL",
+    id: "fso-core",
+    title: "Full Stack Open: Core",
+    issuer: "University of Helsinki",
+    detail:
+      "The core Full Stack Open certification: React, Node.js, Express, MongoDB, testing and CI/CD — modern full-stack web development, verified by the university.",
+    logo: "./assets/helsinki-logo.jpg",
+    logoFallback: "UH",
+    accent: "from-[#0072b5] to-[#004a75]",
+    credentialUrl: "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/6372ba7e9c181265a8e1e37eed0a2d06",
+    media: "./assets/fso-core-cert.jpg",
+  },
+  {
+    id: "cs50",
+    title: "CS50: Computer Science",
+    issuer: "Harvard University",
+    detail:
+      "Harvard's introduction to computer science and the art of programming — C, Python, SQL and JavaScript, with strict correctness, style and memory-safety standards.",
+    logo: "./assets/cs50-logo.jpg",
+    logoFallback: "CS50",
+    accent: "from-[#dc2626] to-[#7f1d1d]",
+    credentialUrl: "https://cs50.harvard.edu/certificates/981ce398-aa92-4c94-8c81-2404f1c9a2b7",
+    media: "./assets/cs50-cert.jpg",
+  },
+  {
+    id: "hf-deep-rl",
+    title: "Deep Reinforcement Learning",
     issuer: "Hugging Face",
     detail:
-      "Transformers, tokenization, semantic search and accelerated inference; multi-agent deep reinforcement learning course with a perfect score.",
+      "Deep RL: Certificate of Excellence — multi-agent deep reinforcement learning with PPO, DQN, A2C and curiosity-driven agents across self-play, 3D vision and robotic-control environments.",
     logo: "./assets/hf-logo.png",
     logoFallback: "HF",
     accent: "from-[#ffd21e] to-[#ff9d00]",
+    credentialUrl: "https://huggingface.co/naimgerges",
+    media: "./assets/hf-deeprl-cert.jpg",
   },
-];
+  {
+    id: "hackerrank-sql",
+    title: "Structured Query Language (SQL)",
+    issuer: "HackerRank",
+    detail:
+      "HackerRank's SQL certification: advanced querying, joins, aggregations and normalization challenges, passed under timed exam conditions.",
+    logo: "./assets/hackerrank-logo.jpg",
+    logoFallback: "HR",
+    accent: "from-[#2ec866] to-[#1a9e4b]",
+    credentialUrl: "https://www.hackerrank.com/certificates/6ceb30f685e8",
+  },
+]
 
 // ---------------------------------------------------------------------------
 // Honors & awards
@@ -436,30 +475,60 @@ export const CERTIFICATIONS: Certification[] = [
 
 export interface Award {
   title: string;
-  issuer: string;
+  issuer?: string;
   detail: string;
   period?: string;
+  /** 1 = first prize (gold medal), undefined = recognition/participation */
+  rank?: 1;
 }
 
 export const AWARDS: Award[] = [
   {
-    title: "1st Prize — Foire des Sciences USJ",
-    issuer: "Université Saint-Joseph de Beyrouth (USJ)",
-    detail:
-      "First prize in the junior category for LibaTourism, an iOS tourism platform built with Swift, MapKit and offline-first maps.",
+    title: "Typing Test",
+    issuer: "India Typing",
+    period: "Jan 2021",
+    detail: "Speed 114.14 words per minute · QWERTY keyboard layout · 10-minute test duration.",
   },
   {
-    title: "Perfect Score — Deep RL Specialization",
-    issuer: "Hugging Face",
-    detail:
-      "Perfect score across eleven reinforcement-learning agents spanning multi-agent play, 3D vision and robotic control.",
+    title: "Sciences Fair “Innovation et excellence”",
+    period: "Mar 2019",
+    detail: "#1 prize — Alpha project — junior category.",
+    rank: 1,
   },
   {
-    title: "TV Feature — MTV Lebanon",
-    issuer: "MTV Lebanon · Interview with Rania Ziade Ashkar",
-    detail: "National television interview covering the LibaTourism platform.",
+    title: "Sciences Fair “Créativité et Innovation”",
+    issuer: "Saint Joseph University – USJ",
+    period: "Mar 2018",
+    detail: "#1 prize — AutoRent project — junior category.",
+    rank: 1,
   },
-];
+  {
+    title: "Golden Pine Awards",
+    issuer: "Collège des Saints-Coeurs Ain Najm",
+    period: "Jul 2017",
+    detail: "Appreciation for winning the science-fair contest — USJ, project: “AutoRent”.",
+  },
+  {
+    title: "Moubarat El Ouloum",
+    issuer: "Lebanese University – Al Hadath",
+    period: "Apr 2017",
+    detail: "#1 prize — LibaTourism project — junior category.",
+    rank: 1,
+  },
+  {
+    title: "Sciences Fair “Innover pour demain”",
+    issuer: "Saint Joseph University – USJ",
+    period: "Apr 2017",
+    detail: "#1 prize — LibaTourism project — junior category.",
+    rank: 1,
+  },
+  {
+    title: "Vex Robotics",
+    issuer: "Holy Spirit University of Kaslik – USEK",
+    period: "Jan 2017",
+    detail: "VRC In The Zone — robotics competition team.",
+  },
+]
 
 // ---------------------------------------------------------------------------
 // Projects — the real portfolio, transcribed from LinkedIn

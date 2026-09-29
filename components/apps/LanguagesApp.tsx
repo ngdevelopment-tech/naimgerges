@@ -39,11 +39,6 @@ const LanguagesApp: React.FC = () => {
               </div>
             </div>
           ))}
-
-          <p className="text-[12px] text-gray-400 leading-relaxed px-1 pt-2">
-            Arabic at home, English in every codebase and classroom, French across Beirut —
-            the working mix behind client projects and international coursework alike.
-          </p>
         </div>
       </div>
     </div>
