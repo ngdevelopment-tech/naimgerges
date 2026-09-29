@@ -1,4 +1,4 @@
-# Naim Gerges — Portfolio OS
+# Portfolio OS — by Naim Gerges
 
 [![Live](https://img.shields.io/badge/Live-Portfolio%20OS-0a66ff)](https://ngdevelopment-tech.github.io/naimgerges/)
 [![Built with](https://img.shields.io/badge/Built%20with-React%2019%20·%20TypeScript%20·%20Vite-3178c6)](https://vitejs.dev/)
@@ -19,14 +19,14 @@ clicking.
 | App | What it really is |
 |---|---|
 | **Projects** | 13 shipped products — fleet-management platforms, a 3D WebGL globe, POS systems, mobile games, e-waste tech — with real architecture notes |
-| **Experience** | 10 roles from IT support at a bank to deep-reinforcement-learning specialists, with the actual work I did at each |
-| **Education** | University of Helsinki (Grade 5/5), Arab Open University, Saints-Cœurs — with verified certificates |
-| **Skills** | 31 skills grouped the LinkedIn way, plus the Courses & events section |
-| **Licenses & Certifications** | IBM, Dubai Future Foundation, University of Helsinki, Hugging Face — real logos and clickable credential links |
-| **Languages** | Arabic, English, French with LinkedIn-style proficiency bars |
-| **Honors & Awards** | 1st Prize at USJ Science Fair, a perfect Deep-RL score, national TV feature |
+| **Experience** | 10 roles spanning IT support, agency work and deep-reinforcement-learning specialization, with the actual work I did at each |
+| **Education** | Degree studies, an open-university CS program graded 5/5, and verified certificates |
+| **Skills** | 31 skills grouped the professional way, plus the Courses & events section |
+| **Licenses & Certifications** | Issuer logos, certificate media and clickable credential links |
+| **Languages** | Arabic, English, French with proficiency bars |
+| **Honors & Awards** | A science-fair first prize, a perfect specialization score, a national TV feature |
 | **Beat Lab** | A free-play drum kit — kick, snare, hi-hat, clap, playable by tap or keyboard, every drum voice synthesized live in WebAudio |
-| **Safari** | Opens to a built-in monkeytype-style typing game — escape time by practicing typing (yes, with your WPM) |
+| **Safari** | Opens to a built-in typing game — escape time by practicing typing (yes, with your WPM) |
 | **FaceTime** | Rings like the real thing — Decline / Accept, language picker, and a message from me |
 | **Terminal** | A working shell: `help`, `about`, `experience`, `projects`, `neofetch` and more |
 | **Calculator, Notes, Finder, Music, Trash, Tic Tac Toe, Settings** | All fully functional. Settings even turns your battery yellow in Low Power Mode |
@@ -40,10 +40,10 @@ and coded from scratch. No templates, no UI kits, no iframes-to-somewhere-else.
 - **React 19 + TypeScript** — strict mode, zero `any` in the app layer
 - **Vite 6** — instant HMR, optimized production builds
 - **Tailwind CSS 4** — the entire design system
-- **WebAudio API** — the Mac startup chime, FaceTime ring/connect/end tones, and every
+- **WebAudio API** — the startup chime, call tones, key clicks, and every
   Beat Lab drum voice are synthesized or streamed in code
 - **Zero backend required** — the whole thing is static; the optional Express server only
-  powers a LinkedIn preview passthrough in development
+  powers a preview passthrough in development
 
 ## Run it locally
 
@@ -79,14 +79,14 @@ public/
   wallpapers/      # the wallpaper collection
 ```
 
-**Want to update my resume content?** It's all in `lib/portfolioData.ts` — one file,
+**Want to update the resume content?** It's all in `lib/portfolioData.ts` — one file,
 strongly typed. No component edits needed.
 
 ## Deployment
 
-This repo is published with **GitHub Pages** from the `main` branch (`/` root).
-The `base` in `vite.config.ts` is relative (`./`), so it also works from any subpath
-or any other static host (Netlify, Vercel, Cloudflare Pages) with zero config.
+Published with **GitHub Pages**. The `base` in `vite.config.ts` is relative (`./`), so it
+also works from any subpath or any other static host (Netlify, Vercel, Cloudflare Pages)
+with zero config.
 
 ## About me
 
