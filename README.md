@@ -16,21 +16,19 @@ clicking.
 
 ## What's inside
 
-| App | What it really is |
-|---|---|
-| **Projects** | 13 shipped products — fleet-management platforms, a 3D WebGL globe, POS systems, mobile games, e-waste tech — with real architecture notes |
-| **Experience** | 10 roles spanning IT support, agency work and deep-reinforcement-learning specialization, with the actual work I did at each |
-| **Education** | Degree studies, an open-university CS program graded 5/5, and verified certificates |
-| **Skills** | 31 skills grouped the professional way, plus the Courses & events section |
-| **Licenses & Certifications** | Issuer logos, certificate media and clickable credential links |
-| **Languages** | Arabic, English, French with proficiency bars |
-| **Honors & Awards** | A science-fair first prize, a perfect specialization score, a national TV feature |
-| **Beat Lab** | A free-play drum kit — kick, snare, hi-hat, clap, playable by tap or keyboard, every drum voice synthesized live in WebAudio |
-| **Safari** | Opens to a built-in typing game — escape time by practicing typing (yes, with your WPM) |
-| **FaceTime** | Rings like the real thing — Decline / Accept, language picker, and a message from me |
-| **Terminal** | A working shell: `help`, `about`, `experience`, `projects`, `neofetch` and more |
-| **Calculator, Notes, Finder, Music, Trash, Tic Tac Toe, Settings** | All fully functional. Settings even turns your battery yellow in Low Power Mode |
-| **Contact** | Every way to reach me, one tap away |
+**The portfolio itself** — every chapter of my career, running as its own app:
+
+Projects · Experience · Education · Skills · Licenses & Certifications · Languages · Honors & Awards
+
+Real work, real credentials, real recognitions. Nothing inflated, nothing templated.
+
+**And a few apps that are exactly what they claim to be:**
+
+- **Beat Lab** — a drum kit you can actually play. Every drum sound is written in code.
+- **Safari** — opens on a typing game. Your WPM is waiting.
+- **FaceTime** — it rings. Answer it.
+- **Terminal** — a working shell. Try `neofetch`.
+- **Calculator, Notes, Finder, Music, Trash, Tic Tac Toe, Settings, Contact** — all real, all functional.
 
 Everything on screen — the window manager, the sounds, the icons, the games — was designed
 and coded from scratch. No templates, no UI kits, no iframes-to-somewhere-else.
