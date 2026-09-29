@@ -26,6 +26,9 @@ import {
   ExperienceIcon,
   EducationIcon,
   SkillsIcon,
+  CertificationsIcon,
+  LanguagesIcon,
+  HonorsIcon,
   BeatLabIcon,
 } from "./icons/AppIcons";
 
@@ -35,6 +38,9 @@ import ProjectsApp from "./apps/ProjectsApp";
 import ExperienceApp from "./apps/ExperienceApp";
 import EducationApp from "./apps/EducationApp";
 import SkillsApp from "./apps/SkillsApp";
+import CertificationsApp from "./apps/CertificationsApp";
+import LanguagesApp from "./apps/LanguagesApp";
+import HonorsApp from "./apps/HonorsApp";
 import BeatLabApp from "./apps/BeatLabApp";
 import TerminalApp from "./apps/TerminalApp";
 import CalculatorApp from "./apps/CalculatorApp";
@@ -156,6 +162,42 @@ const Desktop: React.FC<DesktopProps> = ({ onLock, onRestart, onShutDown, isAsle
       defaultHeight: 640,
       minWidth: 560,
       minHeight: 420,
+      windowType: "unified",
+      inDock: false,
+    },
+    {
+      id: "certifications",
+      title: "Licenses & Certifications",
+      icon: <CertificationsIcon />,
+      component: <CertificationsApp />,
+      defaultWidth: 960,
+      defaultHeight: 640,
+      minWidth: 560,
+      minHeight: 420,
+      windowType: "unified",
+      inDock: false,
+    },
+    {
+      id: "languages",
+      title: "Languages",
+      icon: <LanguagesIcon />,
+      component: <LanguagesApp />,
+      defaultWidth: 640,
+      defaultHeight: 520,
+      minWidth: 420,
+      minHeight: 380,
+      windowType: "unified",
+      inDock: false,
+    },
+    {
+      id: "honors",
+      title: "Honors & Awards",
+      icon: <HonorsIcon />,
+      component: <HonorsApp />,
+      defaultWidth: 680,
+      defaultHeight: 540,
+      minWidth: 420,
+      minHeight: 380,
       windowType: "unified",
       inDock: false,
     },
@@ -531,6 +573,9 @@ const Desktop: React.FC<DesktopProps> = ({ onLock, onRestart, onShutDown, isAsle
     { id: "experience", label: "Experience", icon: <ExperienceIcon /> },
     { id: "education", label: "Education", icon: <EducationIcon /> },
     { id: "skills", label: "Skills", icon: <SkillsIcon /> },
+    { id: "certifications", label: "Certifications", icon: <CertificationsIcon /> },
+    { id: "languages", label: "Languages", icon: <LanguagesIcon /> },
+    { id: "honors", label: "Honors & Awards", icon: <HonorsIcon /> },
     { id: "terminal", label: "Terminal", icon: <TerminalIcon /> },
     { id: "beatlab", label: "Beat Lab", icon: <BeatLabIcon /> },
     { id: "github", label: "GitHub", icon: <GitHubIcon /> },

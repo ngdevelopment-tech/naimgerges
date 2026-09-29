@@ -20,8 +20,11 @@ clicking.
 |---|---|
 | **Projects** | 13 shipped products — fleet-management platforms, a 3D WebGL globe, POS systems, mobile games, e-waste tech — with real architecture notes |
 | **Experience** | 10 roles from IT support at a bank to deep-reinforcement-learning specialists, with the actual work I did at each |
-| **Education** | University of Helsinki (Grade 5/5), Arab Open University, with verified certificates |
-| **Skills** | 31 skills grouped the LinkedIn way, plus languages, courses and honors & awards |
+| **Education** | University of Helsinki (Grade 5/5), Arab Open University, Saints-Cœurs — with verified certificates |
+| **Skills** | 31 skills grouped the LinkedIn way, plus the Courses & events section |
+| **Licenses & Certifications** | IBM, Dubai Future Foundation, University of Helsinki, Hugging Face — real logos and clickable credential links |
+| **Languages** | Arabic, English, French with LinkedIn-style proficiency bars |
+| **Honors & Awards** | 1st Prize at USJ Science Fair, a perfect Deep-RL score, national TV feature |
 | **Beat Lab** | A free-play drum kit — kick, snare, hi-hat, clap, playable by tap or keyboard, every drum voice synthesized live in WebAudio |
 | **Safari** | Opens to a built-in monkeytype-style typing game — escape time by practicing typing (yes, with your WPM) |
 | **FaceTime** | Rings like the real thing — Decline / Accept, language picker, and a message from me |

@@ -441,6 +441,79 @@ export const BeatLabIcon: React.FC = () => (
   </svg>
 );
 
+export const CertificationsIcon: React.FC = () => (
+  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
+    <GlyphTile from="#34c759" to="#1d8a3e" glossId="ce-ic">
+      {/* rosette seal: scalloped ring + ribbon tails */}
+      <g transform="translate(32 30)">
+        {Array.from({ length: 12 }).map((_, i) => (
+          <circle
+            key={i}
+            cx={9.2 * Math.cos((i * 2 * Math.PI) / 12)}
+            cy={9.2 * Math.sin((i * 2 * Math.PI) / 12)}
+            r="4.4"
+            fill="#ffffff"
+            opacity="0.95"
+          />
+        ))}
+        <circle r="9" fill="#ffffff" />
+        <circle r="5.4" fill="#1d8a3e" />
+        <path d="M-3 0 l2.2 2.4 L3 -2" stroke="#ffffff" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+      {/* ribbon tails */}
+      <path d="M25 38 l-4 12 6-3 3 6 4-11" fill="#ffffff" opacity="0.85" />
+      <path d="M39 38 l4 12 -6-3 -3 6 -4-11" fill="#ffffff" opacity="0.85" />
+    </GlyphTile>
+  </svg>
+);
+
+export const LanguagesIcon: React.FC = () => (
+  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
+    <GlyphTile from="#5e5ce6" to="#3634a3" glossId="lg-ic">
+      {/* two speech bubbles — translation between languages */}
+      <path d="M14 20 h22 a5 5 0 0 1 5 5 v8 a5 5 0 0 1 -5 5 h-12 l-6 6 v-6 h-4 a5 5 0 0 1 -5 -5 v-8 a5 5 0 0 1 5 -5 z" fill="#ffffff" opacity="0.95" />
+      <path d="M30 34 h16 a4.4 4.4 0 0 1 4.4 4.4 v6.2 a4.4 4.4 0 0 1 -4.4 4.4 h-2.6 v5 l-5.4-5 h-8 a4.4 4.4 0 0 1 -4.4-4.4 v-6.2 A4.4 4.4 0 0 1 30 34 z" fill="#ffffff" opacity="0.6" />
+      <text x="20" y="31.5" textAnchor="middle" fill="#3634a3" fontSize="11" fontWeight="700" fontFamily="inherit">
+        A
+      </text>
+      <text x="41" y="46.5" textAnchor="middle" fill="#3634a3" fontSize="9.5" fontWeight="700" fontFamily="inherit" opacity="0.9">
+        ع
+      </text>
+    </GlyphTile>
+  </svg>
+);
+
+export const HonorsIcon: React.FC = () => (
+  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
+    <GlyphTile from="#c9a227" to="#8f6e14" glossId="ho-ic">
+      {/* laurel wreath around a star — recognition, not a clip-art trophy */}
+      <g transform="translate(32 33)">
+        {[-1, 1].map((side) => (
+          <g key={side} transform={`scale(${side} 1)`}>
+            {Array.from({ length: 5 }).map((_, i) => {
+              const angle = -150 + i * 24;
+              const rad = (angle * Math.PI) / 180;
+              return (
+                <ellipse
+                  key={i}
+                  cx={15.5 * Math.cos(rad)}
+                  cy={15.5 * Math.sin(rad)}
+                  rx="4.6"
+                  ry="2.3"
+                  fill="#ffffff"
+                  opacity="0.92"
+                  transform={`rotate(${angle + 90} ${15.5 * Math.cos(rad)} ${15.5 * Math.sin(rad)})`}
+                />
+              );
+            })}
+          </g>
+        ))}
+        <path d="M0 -9.5 l2.8 5.7 6.3 .9 -4.6 4.4 1.1 6.3 -5.6 -3 -5.6 3 1.1 -6.3 -4.6 -4.4 6.3 -.9 z" fill="#ffffff" />
+      </g>
+    </GlyphTile>
+  </svg>
+);
+
 export const AvatarBadge: React.FC<{ size?: number }> = ({ size = 96 }) => (
   <svg width={size} height={size} viewBox="0 0 96 96" style={{ display: "block" }}>
     <defs>
