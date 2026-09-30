@@ -90,7 +90,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({
       <div
         className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
-          backgroundImage: `url(${WALLPAPER_URL}), linear-gradient(135deg,#c14e20 0%,#e06c1f 30%,#e79a3c 55%,#8c3b14 100%)`,
+          backgroundImage: `url(${WALLPAPER_URL})`,
         }}
       />
       <div className="absolute inset-0 backdrop-blur-2xl bg-black/25" />

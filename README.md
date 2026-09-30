@@ -16,19 +16,22 @@ clicking.
 
 ## What's inside
 
-**The portfolio itself** — every chapter of my career, running as its own app:
+Every chapter of my career runs as its own app — and the machine around it actually works:
 
-Projects · Experience · Education · Skills · Licenses & Certifications · Languages · Honors & Awards
-
-Real work, real credentials, real recognitions. Nothing inflated, nothing templated.
-
-**And a few apps that are exactly what they claim to be:**
-
-- **Beat Lab** — a drum kit you can actually play. Every drum sound is written in code.
-- **Safari** — opens on a typing game. Your WPM is waiting.
-- **FaceTime** — it rings. Answer it.
-- **Terminal** — a working shell. Try `neofetch`.
-- **Calculator, Notes, Finder, Music, Trash, Tic Tac Toe, Settings, Contact** — all real, all functional.
+| App | What it really is |
+|---|---|
+| **Projects** | The things I've shipped, each with its architecture story |
+| **Experience** | Where I've worked, and what I actually did there |
+| **Education** | Studies and verified results |
+| **Skills** | What I reach for daily |
+| **Licenses & Certifications** | Issuer logos, certificate media, clickable credentials |
+| **Languages** | Arabic, English, French |
+| **Honors & Awards** | Prizes, competitions — and a national TV feature |
+| **FaceTime** | It rings. Answer it. |
+| **Safari** | Opens on a typing game. Your WPM is waiting. |
+| **Beat Lab** | A playable drum kit — every voice written in code |
+| **Terminal** | A real shell. Try `neofetch`. |
+| **Calculator · Notes · Finder · Music · Trash · Tic Tac Toe · Settings · Contact** | All real, all functional |
 
 Everything on screen — the window manager, the sounds, the icons, the games — was designed
 and coded from scratch. No templates, no UI kits, no iframes-to-somewhere-else.

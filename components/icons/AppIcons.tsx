@@ -169,23 +169,16 @@ export const TrashIcon: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 export const GameIcon: React.FC = () => (
-  <Base fill="#f2f2f7" glossId="gm-gloss" glossOpacity={0.08}>
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="#f2f2f7" />
-    {/* grid */}
-    <path d="M26 18 v28 M38 18 v28 M18 26 h28 M18 38 h28" stroke="#c7c7cc" strokeWidth="2.2" strokeLinecap="round" />
-    {/* X and O */}
-    <path d="M19.5 19.5 l4.5 4.5 M24 19.5 l-4.5 4.5" stroke="#1c1c1e" strokeWidth="2.6" strokeLinecap="round" />
-    <circle cx="44" cy="44" r="3.2" stroke="#ff453a" strokeWidth="2.6" fill="none" />
-    <circle cx="32" cy="32" r="3.2" stroke="#5e5ce6" strokeWidth="2.6" fill="none" />
-    <rect x="1" y="1" width="62" height="62" rx="14.5" fill="none" stroke="rgba(0,0,0,0.1)" strokeWidth="1" />
-  </Base>
+  <ImgIcon src="./assets/icons/games.png" alt="Tic Tac Toe" />
 );
 
 export const FaceTimeIcon: React.FC = () => (
   <ImgIcon src="./assets/icons/facetime.png" alt="FaceTime" />
 );
 
-export const PreviewIcon: React.FC = () => <CVIcon />;
+export const PreviewIcon: React.FC = () => (
+  <ImgIcon src="./assets/icons/preview.png" alt="Preview" />
+);
 
 /** Shared squircle tile with a lucide glyph, for the profile section apps. */
 const GlyphTile: React.FC<{
@@ -208,15 +201,7 @@ const GlyphTile: React.FC<{
 );
 
 export const ExperienceIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#5b8def" to="#2f5fd0" glossId="ex-ic">
-      {/* briefcase */}
-      <rect x="14" y="22" width="36" height="26" rx="5" fill="#ffffff" opacity="0.95" />
-      <path d="M25 22 v-4 a4 4 0 0 1 4 -4 h6 a4 4 0 0 1 4 4 v4" stroke="#ffffff" strokeWidth="3" fill="none" strokeLinecap="round" />
-      <rect x="14" y="31" width="36" height="3.5" fill="#2f5fd0" opacity="0.35" />
-      <rect x="29" y="29.5" width="6" height="6.5" rx="1.6" fill="#2f5fd0" />
-    </GlyphTile>
-  </svg>
+  <ImgIcon src="./assets/icons/work-folder.png" alt="Experience" />
 );
 
 export const EducationIcon: React.FC = () => (
@@ -241,18 +226,7 @@ export const PlaygroundIcon: React.FC = () => (
 );
 
 export const BeatLabIcon: React.FC = () => (
-  <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#ff5f6d" to="#b8174a" glossId="bl-ic">
-      {/* drum-machine grid: 2 rows of pads + play triangle */}
-      <rect x="14" y="22" width="10" height="10" rx="2.5" fill="#ffffff" opacity="0.95" />
-      <rect x="27" y="22" width="10" height="10" rx="2.5" fill="#ffffff" opacity="0.55" />
-      <rect x="40" y="22" width="10" height="10" rx="2.5" fill="#ffffff" opacity="0.95" />
-      <rect x="14" y="35" width="10" height="10" rx="2.5" fill="#ffd60a" />
-      <rect x="27" y="35" width="10" height="10" rx="2.5" fill="#ffffff" opacity="0.55" />
-      <rect x="40" y="35" width="10" height="10" rx="2.5" fill="#ffffff" opacity="0.95" />
-      <path d="M30 12 l5 3.4 -5 3.4 z" fill="#ffffff" opacity="0.9" />
-    </GlyphTile>
-  </svg>
+  <ImgIcon src="./assets/icons/garageband.png" alt="Beat Lab" />
 );
 
 export const CertificationsIcon: React.FC = () => (
@@ -265,8 +239,8 @@ export const LanguagesIcon: React.FC = () => (
 
 export const HonorsIcon: React.FC = () => (
   <svg viewBox={SQUICLE} className="w-full h-full" style={{ display: "block" }}>
-    <GlyphTile from="#8a2f3f" to="#4d1420" glossId="ho-ic">
-      {/* laurel wreath around a star — recognition, not a clip-art trophy */}
+    <GlyphTile from="#3f5a52" to="#1d332c" glossId="ho-ic">
+      {/* laurel wreath around a star — quiet recognition, deep pine green */}
       <g transform="translate(32 33)">
         {[-1, 1].map((side) => (
           <g key={side} transform={`scale(${side} 1)`}>

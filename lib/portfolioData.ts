@@ -199,7 +199,7 @@ export const EXPERIENCE: Experience[] = [
     description:
       "Hands-on experience with a full-stack web technology recognized and awarded in international invention competitions — real-time code and visual editing tools for web application creation.",
     highlights: [
-      "Web Development: assisted in building and maintaining robust, scalable web applications on Bracket's full-stack technology",
+      "Web Development: assisted in building and maintaining dependable, scalable web applications on Bracket's full-stack technology",
       "Real-Time Coding: contributed to real-time code and visual editing tools for web application creation",
       "Data Management: developed and managed data and file creation processes within a single platform",
       "Award-Winning Tech: worked with technology recognized in international invention competitions",
@@ -553,13 +553,13 @@ export const PROJECTS: PortfolioProject[] = [
     title: "Deals On Wheels",
     tagline: "Fleet Management Platform",
     description:
-      "Deals On Wheels features a cutting-edge Fleet Management System giving administrators full control over luxury vehicle operations — complete inventory management, mileage tracking, maintenance scheduling, and repair history logging. Real-time monitoring, analytics and reporting provide actionable insights, while integrated notifications and activity logs ensure secure, transparent management.",
+      "Deals On Wheels features a sharp Fleet Management System giving administrators full control over luxury vehicle operations — complete inventory management, mileage tracking, maintenance scheduling, and repair history logging. Real-time monitoring, analytics and reporting surface what matters, while integrated notifications and activity logs keep management secure and transparent.",
     highlights: {
       heading: "Key Achievements",
       bullets: [
         "Developed a full-stack web platform with customer portal and admin dashboard",
         "Implemented real-time fleet tracking with automated maintenance scheduling",
-        "Created an integrated booking system with seamless payment processing",
+        "Built an integrated booking flow with payments that just work",
         "Delivered advanced analytics for operational insights and revenue optimization",
       ],
     },

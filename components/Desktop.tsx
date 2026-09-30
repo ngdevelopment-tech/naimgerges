@@ -598,7 +598,7 @@ const Desktop: React.FC<DesktopProps> = ({ onLock, onRestart, onShutDown, isAsle
       {/* Wallpaper */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-[background-image] duration-500"
-        style={{ backgroundImage: `url(${wallpaper}), linear-gradient(135deg,#c14e20 0%,#e06c1f 30%,#e79a3c 55%,#8c3b14 100%)` }}
+        style={{ backgroundImage: `url(${wallpaper})` }}
       />
 
       {/* Desktop icons */}
@@ -609,8 +609,7 @@ const Desktop: React.FC<DesktopProps> = ({ onLock, onRestart, onShutDown, isAsle
         {desktopIcons.map((icon) => (
           <button
             key={icon.id}
-            onDoubleClick={() => launchApp(icon.id)}
-            onClick={(e) => e.detail === 2 && launchApp(icon.id)}
+            onClick={() => launchApp(icon.id)}
             className="group flex flex-col items-center w-[86px] md:w-[92px] rounded-lg p-1.5 hover:bg-white/10 active:bg-white/20 transition-colors focus:outline-none"
           >
             <span className="w-[52px] h-[52px] md:w-[56px] md:h-[56px] drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">
