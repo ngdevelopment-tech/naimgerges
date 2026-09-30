@@ -98,7 +98,7 @@ reinforcement learning to transformer search pipelines.
 
 - GitHub · [ngdevelopment-tech](https://github.com/ngdevelopment-tech)
 - LinkedIn · [naim-gerges](https://lb.linkedin.com/in/naim-gerges-892591271)
-- Instagram · [naimgerges1](https://www.instagram.com/naimgerges1)
+- Instagram · [naiimgerges](https://www.instagram.com/naiimgerges)
 - Hugging Face · [naimgerges](https://huggingface.co/naimgerges)
 - Email · [naiimgerges@outlook.com](mailto:naiimgerges@outlook.com)
 - WhatsApp · [+961 76 923 233](https://wa.me/96176923233)
