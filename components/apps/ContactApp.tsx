@@ -9,6 +9,8 @@ import {
   USER_WHATSAPP_LINK,
   LINKEDIN_URL,
   GITHUB_URL,
+  INSTAGRAM_URL,
+  INSTAGRAM_HANDLE,
 } from "../../constants";
 
 /**
@@ -74,6 +76,16 @@ const GitHubTile: React.FC = () => (
   </Tile>
 );
 
+const InstagramTile: React.FC = () => (
+  <Tile label="Instagram" gradient="bg-[linear-gradient(45deg,#f9ce34_0%,#ee2a7b_50%,#6228d7_100%)]">
+    <svg viewBox="0 0 24 24" className="w-[22px] h-[22px]" fill="none">
+      <rect x="3" y="3" width="18" height="18" rx="5.2" stroke="#ffffff" strokeWidth="1.9" />
+      <circle cx="12" cy="12" r="4.1" stroke="#ffffff" strokeWidth="1.9" />
+      <circle cx="17.2" cy="6.8" r="1.25" fill="#ffffff" />
+    </svg>
+  </Tile>
+);
+
 const ContactApp: React.FC = () => {
   const [copied, setCopied] = useState<string | null>(null);
 
@@ -119,6 +131,14 @@ const ContactApp: React.FC = () => {
       href: GITHUB_URL,
       icon: <GitHubTile />,
       copyable: false,
+    },
+    {
+      key: "instagram",
+      label: "Instagram",
+      value: INSTAGRAM_HANDLE,
+      href: INSTAGRAM_URL,
+      icon: <InstagramTile />,
+      copyable: true,
     },
   ];
 

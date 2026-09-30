@@ -15,6 +15,8 @@ export const USER_WHATSAPP_NUMBER = "+961 76 923 233";
 export const USER_WHATSAPP_LINK = "https://wa.me/96176923233";
 
 export const LINKEDIN_URL = "https://lb.linkedin.com/in/naim-gerges-892591271";
+export const INSTAGRAM_URL = "https://www.instagram.com/naimgerges1";
+export const INSTAGRAM_HANDLE = "@naimgerges1";
 export const LINKEDIN_PROFILE_PATH = "/in/naim-gerges-892591271/";
 export const LINKEDIN_API_ROUTE = "/api/linkedin-profile";
 export const HUGGINGFACE_URL = "https://huggingface.co/naimgerges";
