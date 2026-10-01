@@ -26,7 +26,7 @@ Every chapter of my career runs as its own app — and the machine around it act
 | **Skills** | What I reach for daily |
 | **Licenses & Certifications** | Issuer logos, certificate media, clickable credentials |
 | **Languages** | Arabic, English, French |
-| **Honors & Awards** | Prizes, competitions — and a national TV feature |
+| **Honors & Awards** | Prizes, competitions and a national TV feature |
 | **FaceTime** | It rings. Answer it. |
 | **Safari** | Opens on a typing game. Your WPM is waiting. |
 | **Beat Lab** | A playable drum kit — every voice written in code |
