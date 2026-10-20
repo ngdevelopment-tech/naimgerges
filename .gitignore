@@ -25,6 +25,3 @@ Thumbs.db
 *.sln
 *.sw?
 
-# Freebuff workspace metadata
-.freebuff
-refs/
